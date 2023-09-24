@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\piter\\Desktop\\Flight_Planner\\FlightPlanner\\FlightPlanner\\FlightPlanner.csproj": {}
+    "C:\\Users\\piter\\Desktop\\flight-planner\\FlightPlanner\\FlightPlanner.csproj": {}
   },
   "projects": {
-    "C:\\Users\\piter\\Desktop\\Flight_Planner\\FlightPlanner\\FlightPlanner\\FlightPlanner.csproj": {
+    "C:\\Users\\piter\\Desktop\\flight-planner\\FlightPlanner\\FlightPlanner.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\piter\\Desktop\\Flight_Planner\\FlightPlanner\\FlightPlanner\\FlightPlanner.csproj",
+        "projectUniqueName": "C:\\Users\\piter\\Desktop\\flight-planner\\FlightPlanner\\FlightPlanner.csproj",
         "projectName": "FlightPlanner",
-        "projectPath": "C:\\Users\\piter\\Desktop\\Flight_Planner\\FlightPlanner\\FlightPlanner\\FlightPlanner.csproj",
+        "projectPath": "C:\\Users\\piter\\Desktop\\flight-planner\\FlightPlanner\\FlightPlanner.csproj",
         "packagesPath": "C:\\Users\\piter\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\piter\\Desktop\\Flight_Planner\\FlightPlanner\\FlightPlanner\\obj\\",
+        "outputPath": "C:\\Users\\piter\\Desktop\\flight-planner\\FlightPlanner\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

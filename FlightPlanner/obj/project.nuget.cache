@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "X5TKV9N6IotD6W0qiYqX6V7wcofO1cEHU648jewINC9hlKzNt2maYaPBtiIantx2du3Do70P18FD+EcK1bliEg==",
+  "dgSpecHash": "E7v2dhLbTqxgMG+XwjhcKv3445e28DrcAGeiCnrbXPf8uAaYhWlqBQGcDvbsvC7FJ8J4HKQ+iNdVe/Kjgunpew==",
   "success": true,
-  "projectFilePath": "C:\\Users\\piter\\Desktop\\Flight_Planner\\FlightPlanner\\FlightPlanner\\FlightPlanner.csproj",
+  "projectFilePath": "C:\\Users\\piter\\Desktop\\flight-planner\\FlightPlanner\\FlightPlanner.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\piter\\.nuget\\packages\\identityserver3\\2.6.3\\identityserver3.2.6.3.nupkg.sha512",
     "C:\\Users\\piter\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
