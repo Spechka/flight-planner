@@ -1,5 +1,7 @@
 using FlightPlanner.Handlers;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.SqlServer;
 
 namespace FlightPlanner
 {
@@ -12,7 +14,7 @@ namespace FlightPlanner
             // Add services to the container.
 
             builder.Services.AddControllers();
-
+            builder.Services.AddDbContext<FlightPlannerDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("flight-planner")));
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             builder.Services.AddAuthentication("BasicAuthentication")

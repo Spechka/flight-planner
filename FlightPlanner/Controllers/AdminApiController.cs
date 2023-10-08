@@ -4,6 +4,7 @@ using FlightPlanner.Validations;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace FlightPlanner.Controllers
 {
@@ -12,11 +13,11 @@ namespace FlightPlanner.Controllers
     [ApiController]
     public class AdminApiController : ControllerBase
     {
-        private readonly FlightStorage _storage;
+        private readonly FlightPlannerDbContext _context;
 
-        public AdminApiController()
+        public AdminApiController(FlightPlannerDbContext context)
         {
-            _storage = new FlightStorage();
+            _context = context;
         }
 
         private static readonly object _locker = new object();
@@ -27,7 +28,7 @@ namespace FlightPlanner.Controllers
         {
             lock (_locker)
             {
-                var flight = FlightStorage.GetFlight(id);
+                var flight = _context.Flights.SingleOrDefault(f => f.Id == id);
                 if (flight == null)
                 {
                     return NotFound();
@@ -48,12 +49,18 @@ namespace FlightPlanner.Controllers
                     return BadRequest();
                 }
 
-                if (FlightValidations.IsDuplicated(flight, FlightStorage._flightStorage))
+                var allFlights = _context.Flights
+                    .Include(f => f.From)
+                    .Include(f => f.To)
+                    .ToList();
+
+                if (FlightValidations.IsDuplicated(flight, allFlights))
                 {
                     return Conflict();
                 }
 
-                _storage.AddFlight(flight);
+                _context.Flights.Add(flight);
+                _context.SaveChanges();
                 return Created("", flight);
             }
         }
@@ -64,7 +71,15 @@ namespace FlightPlanner.Controllers
         {
             lock (_locker)
             {
-                FlightStorage.FlightDelete(id);
+                var flight = _context.Flights.SingleOrDefault(f => f.Id == id);
+
+                if (flight != null)
+                {
+                    _context.Flights.Remove(flight);
+                }
+
+                _context.SaveChanges();
+
                 return Ok();
             }
         }
