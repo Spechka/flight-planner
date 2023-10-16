@@ -2,18 +2,12 @@
 using FlightPlanner.Core.Models;
 using FlightPlanner.Core.Services;
 using FlightPlanner.Core.Validations;
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using Microsoft.OpenApi.Models;
-using FlightPlanner.Handlers;
-using Microsoft.EntityFrameworkCore;
 using FlightPlanner.Data;
+using FlightPlanner.Handlers;
 using FlightPlanner.Services;
-using Microsoft.Data.Sqlite;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
 
 namespace FlightPlanner
 {

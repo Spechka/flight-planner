@@ -2,9 +2,9 @@
 {
     public class FlightRequest
     {
-        
+
         public int Id { get; set; }
-        
+
         public AirportRequest From { get; set; }
 
         public AirportRequest To { get; set; }

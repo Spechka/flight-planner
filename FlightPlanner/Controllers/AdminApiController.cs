@@ -1,11 +1,8 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using AutoMapper;
+﻿using AutoMapper;
 using FlightPlanner.Core.Models;
 using FlightPlanner.Core.Services;
 using FlightPlanner.Core.Validations;
 using FlightPlanner.Models;
-using FlightPlanner.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SearchFlightRequest = FlightPlanner.Core.Models.SearchFlightRequest;

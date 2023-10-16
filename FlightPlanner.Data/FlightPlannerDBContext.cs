@@ -1,6 +1,5 @@
 ﻿using FlightPlanner.Core.Models;
 using Microsoft.EntityFrameworkCore;
-using System.Threading.Tasks;
 
 namespace FlightPlanner.Data
 {

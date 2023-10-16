@@ -3,9 +3,8 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.Options;
 using System.Net.Http.Headers;
 using System.Security.Claims;
-using System.Text.Encodings.Web;
 using System.Text;
-using IdentityServer3.Core.Services;
+using System.Text.Encodings.Web;
 
 namespace FlightPlanner.Handlers
 {
@@ -36,7 +35,7 @@ namespace FlightPlanner.Handlers
                 username = credentials[0];
                 var password = credentials[1];
 
-                if(username == "codelex-admin" && password == "Password123")
+                if (username == "codelex-admin" && password == "Password123")
                 {
                     authorized = true;
                 }
